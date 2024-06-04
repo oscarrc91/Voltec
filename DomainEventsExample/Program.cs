@@ -1,5 +1,4 @@
 using Carter;
-using GNB_Products.Persistence;
 using GNB_Products.Services;
 using FluentValidation;
 using MediatR;
@@ -8,8 +7,6 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCarter();
-builder.Services.AddDbContext<MyDbContext>(options => options
-    .UseInMemoryDatabase(nameof(MyDbContext)));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(typeof(Program));

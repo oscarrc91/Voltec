@@ -1,6 +1,5 @@
 ﻿using Carter;
 using GNB_Products.Domain.Entities;
-using GNB_Products.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -26,12 +25,6 @@ public class GetTransactions : ICarterModule
 
     public class GetTransactionsHandler : IRequestHandler<GetTransactionsQuery, List<GetTransactionsResponse>>
     {
-        private readonly MyDbContext _context;
-
-        public GetTransactionsHandler(MyDbContext context)
-        {
-            _context = context;
-        }
 
         public Task<List<GetTransactionsResponse>> Handle(GetTransactionsQuery request, CancellationToken cancellationToken)
         {

@@ -1,4 +1,4 @@
-﻿using GNB_Products.Domain.Events;
+﻿
 
 namespace GNB_Products.Domain.Entities;
 public class Rate
